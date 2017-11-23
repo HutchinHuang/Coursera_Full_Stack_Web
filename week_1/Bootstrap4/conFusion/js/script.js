@@ -1,5 +1,7 @@
 $(document).ready(function(){
+    // Carousel
     $("#mycarousel").carousel({interval:2000});
+    
     $("#carousel-button").click(function(){
         if ($("#carousel-button").children("span").hasClass("fa-pause")) {
             $("#mycarousel").carousel('pause');
@@ -11,5 +13,15 @@ $(document).ready(function(){
             $("#carousel-button").children("span").removeClass("fa-play");
             $("#carousel-button").children("span").addClass("fa-pause");
         }
+    });
+
+    // Reserve-Table Modal
+    $("#reserveButton").click(function(){
+        $("#reserveModal").modal('toggle');
+    });
+
+    // Login Modal
+    $("#loginButton").click(function(){
+        $("#loginModal").modal('toggle');
     });
 });
